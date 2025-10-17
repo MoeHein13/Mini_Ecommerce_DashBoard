@@ -1,0 +1,154 @@
+{
+  "products": [
+    {
+      "id": 101,
+      "name": "Wireless Mouse",
+      "category": "Electronics",
+      "price": 25.99,
+      "rating": 4.2,
+      "stock": 120,
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+      "description": "Ergonomic 2.4GHz wireless mouse with silent clicks."
+    },
+    {
+      "id": 102,
+      "name": "Mechanical Keyboard",
+      "category": "Electronics",
+      "price": 75.5,
+      "rating": 4.6,
+      "stock": 80,
+      "image": "https://images.unsplash.com/photo-1587202372775-a971b3b39f95",
+      "description": "RGB backlit mechanical keyboard with blue switches."
+    },
+    {
+      "id": 103,
+      "name": "Office Chair",
+      "category": "Furniture",
+      "price": 150,
+      "rating": 4.1,
+      "stock": 40,
+      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+      "description": "Comfortable office chair with lumbar support."
+    },
+    {
+      "id": 104,
+      "name": "Desk Lamp",
+      "category": "Furniture",
+      "price": 45.99,
+      "rating": 4.0,
+      "stock": 70,
+      "image": "https://images.unsplash.com/photo-1616628182501-9a379e79f05c",
+      "description": "Adjustable LED desk lamp with 3 brightness modes."
+    },
+    {
+      "id": 105,
+      "name": "Water Bottle",
+      "category": "Accessories",
+      "price": 12.5,
+      "rating": 4.5,
+      "stock": 200,
+      "image": "https://images.unsplash.com/photo-1580910051074-7a9cfa02cccf",
+      "description": "Stainless steel reusable water bottle, 1L."
+    },
+    {
+      "id": 106,
+      "name": "Smartphone Stand",
+      "category": "Electronics",
+      "price": 18.75,
+      "rating": 4.3,
+      "stock": 150,
+      "image": "https://images.unsplash.com/photo-1606813902914-3f6c9f38e4bb",
+      "description": "Aluminum adjustable smartphone stand for desk."
+    },
+    {
+      "id": 107,
+      "name": "Notebook",
+      "category": "Stationery",
+      "price": 3.99,
+      "rating": 4.4,
+      "stock": 300,
+      "image": "https://images.unsplash.com/photo-1522204523234-872c2e0b6f99",
+      "description": "A5 dotted notebook, 120 pages."
+    },
+    {
+      "id": 108,
+      "name": "Backpack",
+      "category": "Bags",
+      "price": 55,
+      "rating": 4.2,
+      "stock": 90,
+      "image": "https://images.unsplash.com/photo-1504280390368-3970a785fbae",
+      "description": "Durable laptop backpack with 15-inch compartment."
+    },
+    {
+      "id": 109,
+      "name": "Running Shoes",
+      "category": "Clothing",
+      "price": 99.99,
+      "rating": 4.7,
+      "stock": 60,
+      "image": "https://images.unsplash.com/photo-1528701800489-20be9c1c9e47",
+      "description": "Lightweight breathable running shoes."
+    },
+    {
+      "id": 110,
+      "name": "Bluetooth Headphones",
+      "category": "Electronics",
+      "price": 120,
+      "rating": 4.5,
+      "stock": 50,
+      "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9",
+      "description": "Noise-cancelling wireless headphones with 30h battery."
+    },
+    {
+      "id": 111,
+      "name": "Coffee Mug",
+      "category": "Kitchenware",
+      "price": 7.5,
+      "rating": 4.0,
+      "stock": 180,
+      "image": "https://images.unsplash.com/photo-1517685352821-92cf88aee5a5",
+      "description": "Classic ceramic coffee mug, 350ml."
+    },
+    {
+      "id": 112,
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "price": 250,
+      "rating": 4.3,
+      "stock": 30,
+      "image": "https://images.unsplash.com/photo-1516264660970-1edcbe1e61b1",
+      "description": "Smart watch with GPS, SpO2 tracking, swim-proof."
+    },
+    {
+      "id": 113,
+      "name": "T-Shirt",
+      "category": "Clothing",
+      "price": 19.99,
+      "rating": 4.1,
+      "stock": 140,
+      "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+      "description": "Soft cotton unisex T-shirt."
+    },
+    {
+      "id": 114,
+      "name": "Sunglasses",
+      "category": "Accessories",
+      "price": 49.99,
+      "rating": 4.2,
+      "stock": 100,
+      "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
+      "description": "Polarized UV400 protection sunglasses."
+    },
+    {
+      "id": 115,
+      "name": "Gaming Chair",
+      "category": "Furniture",
+      "price": 320,
+      "rating": 4.4,
+      "stock": 25,
+      "image": "https://images.unsplash.com/photo-1616627568931-33c92e68e45f",
+      "description": "Ergonomic gaming chair with recline function."
+    }
+  ]
+}

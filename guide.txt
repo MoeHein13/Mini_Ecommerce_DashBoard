@@ -1,0 +1,17 @@
+view product in grid
+filter by category , search by name, sort by price
+add products to cart
+view product details
+manage stock limit 
+resuable components
+
+
+Components
+
+SearchBar
+CategoryFilter
+SortSelect
+Product Card
+
+
+

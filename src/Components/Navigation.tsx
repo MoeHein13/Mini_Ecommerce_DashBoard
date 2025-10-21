@@ -1,9 +1,7 @@
-import React from "react";
-
 const Navigation = () => {
   return (
     <>
-      <nav className="p-4 w-full bg-neutral-500 flex items-center justify-end gap-5 text-gray-200 font-medium">
+      <nav className="p-4 w-full bg-neutral-500 flex items-center justify-end gap-5 text-gray-200 font-medium mb-3">
         <span>Home</span>
         <span>Home</span>
         <span>Home</span>

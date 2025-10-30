@@ -1,14 +1,23 @@
+import { Search, ShoppingCart } from "lucide-react";
 const Navigation = () => {
   return (
     <>
-      <nav className="p-4 w-full bg-neutral-500 flex items-center justify-end gap-5 text-gray-200 font-medium mb-3">
-        <span>Home</span>
-        <span>Home</span>
-        <span>Home</span>
-        <span>Home</span>
-        <span>Home</span>
+      <div>
+        <nav className="p-4 w-full bg-neutral-500 flex items-center justify-between gap-5 text-gray-200 font-medium ">
+          <h1 className="font-bold text-2xl">ShopHub</h1>
+          <div className="flex items-center gap-2">
+            <span>Home</span>
+            <span>Home</span>
+            <span>Home</span>
+            <span>Home</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <Search color="#e3dede" strokeWidth={1.75} />
+            <ShoppingCart color="#b5a6a6" />
+          </div>
+        </nav>
         <div className="w-full bg-purple-400 ">
-          <div className="max-h-dvh flex justify-center items-center gap-5">
+          <div className="max-h-dvh flex-col justify-center items-center gap-5">
             <h2 className="text-2xl font-semibold">
               Discover Amazing Products
             </h2>
@@ -19,7 +28,7 @@ const Navigation = () => {
             <button className="bg-white rounded px-4 py-2">Shop now</button>
           </div>
         </div>
-      </nav>
+      </div>
     </>
   );
 };

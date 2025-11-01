@@ -1,5 +1,7 @@
 import { Search, ShoppingCart } from "lucide-react";
+import { useState } from "react";
 const Navigation = () => {
+  const [menuDrop, setMenuDrop] = useState(false);
   return (
     <>
       <div>
@@ -13,7 +15,7 @@ const Navigation = () => {
           </div>
           <div className="flex items-center gap-3">
             <Search color="#e3dede" strokeWidth={1.75} />
-            <ShoppingCart color="#b5a6a6" />
+            {menuDrop && <ShoppingCart color="#b5a6a6" />}
           </div>
         </nav>
         <div className="w-full bg-purple-400 ">

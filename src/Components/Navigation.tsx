@@ -1,39 +1,67 @@
-import { Search, ShoppingCart, Menu } from "lucide-react";
+import { Search, ShoppingCart, Menu, X } from "lucide-react";
 import { useState } from "react";
 const Navigation = () => {
-  const [menuDrop, setMenuDrop] = useState(false);
+  const [menuDrop, setMenuDrop] = useState<boolean>(false);
+
+  const renderNav = (
+    <nav className="flex flex-col gap-3 m-3 md:hidden">
+      <span>Home</span>
+      <span>Shop</span>
+      <span>About</span>
+      <span>Contact</span>
+    </nav>
+  );
+
+  const handleMenuClick = () => {
+    setMenuDrop((prev) => !prev);
+  };
   return (
     <>
-      <div>
-        <nav className="p-4 w-full bg-neutral-500 flex items-center justify-between gap-5 text-gray-200 font-medium ">
-          <h1 className="font-bold text-2xl">ShopHub</h1>
-          <div className="flex items-center gap-2">
-            <span>Home</span>
-            <span>Shop</span>
-            <span>About</span>
-            <span>Contact</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Search color="#e3dede" strokeWidth={1.75} />
-            <Menu />
-            <ShoppingCart color="#b5a6a6" />
-          </div>
-        </nav>
-        <div className="w-full bg-purple-400  p-6">
-          <div className="text-center flex-col justify-center items-center ">
-            <h2 className="text-2xl font-semibold">
-              Discover Amazing Products
-            </h2>
-            <div className="font-medium text-gray-200">
-              Shop the latest trends and find everything you need in one place.
-              Quality products at unbeateable prices
+      <header className="bg-white border-b-gray-400 w-full sticky  ">
+        <div className=" max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto ">
+          <div className="flex items-center justify-between gap-5 font-medium h-16">
+            <div className="flex-shrink-0">
+              <h1 className="font-bold text-2xl">ShopHub</h1>
             </div>
-            <button className="bg-white rounded px-4 py-2 mt-4">
-              Shop now
-            </button>
+            <nav className=" hidden md:flex space-x-3 ">
+              <span>Home</span>
+              <span>Shop</span>
+              <span>About</span>
+              <span>Contact</span>
+            </nav>
+            <div className="flex items-center gap-3">
+              <Search
+                color="#000000"
+                strokeWidth={1.75}
+                className="hidden md:inline"
+              />
+              {menuDrop ? (
+                <X
+                  className={`md:hidden hover:cursor-pointer`}
+                  onClick={handleMenuClick}
+                />
+              ) : (
+                <Menu
+                  className="md:hidden hover:cursor-pointer"
+                  onClick={handleMenuClick}
+                />
+              )}
+              <ShoppingCart color="#000000" />
+            </div>
           </div>
         </div>
-      </div>
+        {menuDrop && renderNav}
+      </header>
+      <section className="w-full bg-purple-400  p-6">
+        <div className="text-center flex-col justify-center items-center ">
+          <h2 className="text-2xl font-semibold">Discover Amazing Products</h2>
+          <div className="font-medium text-gray-200">
+            Shop the latest trends and find everything you need in one place.
+            Quality products at unbeateable prices
+          </div>
+          <button className="bg-white rounded px-4 py-2 mt-4">Shop now</button>
+        </div>
+      </section>
     </>
   );
 };

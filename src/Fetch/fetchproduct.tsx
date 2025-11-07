@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const fetchproduct = () => {
-  return <div>fetchproduct</div>;
+  const [products, setProducts] = useState("");
+
+  return <div></div>;
 };
 
 export default fetchproduct;

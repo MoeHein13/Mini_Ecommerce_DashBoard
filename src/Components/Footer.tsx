@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <footer className="max-w-full bg-gray-900">
-        <div className="grid  grid-cols-1 md:grid-cols-4 border-b-2 p-5 gap-3 text-gray-400">
+        <div className="grid  grid-cols-1 md:grid-cols-4 border-b-2 p-5 gap-3 text-gray-400 border border-gray-400">
           <div className="space-y-2">
             <h1 className="font-semibold text-white text-xl ">ShopHub</h1>
             <p>Your one-stop shop for premium products at great prices</p>

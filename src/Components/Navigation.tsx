@@ -17,7 +17,7 @@ const Navigation = () => {
   };
   return (
     <>
-      <header className="bg-white border-b-gray-400 w-full sticky  ">
+      <header className="bg-white border-b-gray-400 w-full  ">
         <div className=" max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto ">
           <div className="flex items-center justify-between gap-5 font-medium h-16">
             <div className="flex-shrink-0">
@@ -59,7 +59,9 @@ const Navigation = () => {
             Shop the latest trends and find everything you need in one place.
             Quality products at unbeateable prices
           </div>
-          <button className="bg-white rounded px-4 py-2 mt-4">Shop now</button>
+          <button className="bg-white rounded px-4 py-2 mt-4 cursor-pointer  hover:font-semibold transition-colors duration-100">
+            Shop now
+          </button>
         </div>
       </section>
     </>

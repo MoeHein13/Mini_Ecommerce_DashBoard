@@ -1,14 +1,16 @@
 import Footer from "./Components/Footer";
 import Navigation from "./Components/Navigation";
-import SearchBar from "./Components/SearchBar";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClilent = new QueryClient();
 
 const App = () => {
   return (
-    <div>
+    <QueryClientProvider client={queryClilent}>
       <Navigation />
       {/* <SearchBar /> */}
       <Footer />
-    </div>
+    </QueryClientProvider>
   );
 };
 

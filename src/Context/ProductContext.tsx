@@ -1,20 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-const fetchproduct = () => {
-  const [products, setProducts] = useState("");
+type Product = any;
 
-  const { data, isPending, error } = useQuery({
+const fetchproduct = () => {
+  const { data, isLoading, error } = useQuery<Product[]>({
     queryKey: ["productData"],
-    queryFn: async () => {
+    queryFn: async (): Promise<Product[]> => {
       const response = await axios.get("http://localhost:8000");
-      const data = response.data;
-      return data;
+      return response.data;
     },
   });
 
-  return <div></div>;
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error loading products</div>;
+
+  return <div>{JSON.stringify(data)}</div>;
 };
 
 export default fetchproduct;

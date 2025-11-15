@@ -1,7 +1,24 @@
 import { Search, ShoppingCart, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import type { productType } from "../types/productstype";
+import axios from "axios";
 const Navigation = () => {
   const [menuDrop, setMenuDrop] = useState<boolean>(false);
+
+  const [products, setProducts] = useState<productType[]>([]);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get(`http://localhost:8000`);
+        const data = await response.data;
+
+        setProducts(data);
+      } catch (error) {
+        alert(error);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   const renderNav = (
     <nav className="flex flex-col gap-3 m-3 md:hidden">

@@ -9,12 +9,16 @@ const Navigation = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000`);
-        const data = await response.data;
-
+        const response = await axios.get(`http://localhost:5500/products`);
+        const data = response.data;
         setProducts(data);
+        console.log("fetched products:", data);
       } catch (error) {
-        alert(error);
+        // show a more useful error in the console for debugging
+        console.error("Failed to fetch products:", error);
+        alert(
+          "Failed to fetch products. Make sure json-server is running on port 5500 (npm run json-server)"
+        );
       }
     };
     fetchProducts();
@@ -29,6 +33,17 @@ const Navigation = () => {
     </nav>
   );
 
+  const renderProducts = products.map((product) => {
+    return (
+      <li key={product.id}>
+        {product.description}
+        {product.category}
+      </li>
+    );
+  });
+
+  // (optional) debug log for the products state
+  // console.log("products state:", products);
   const handleMenuClick = () => {
     setMenuDrop((prev) => !prev);
   };
@@ -81,6 +96,7 @@ const Navigation = () => {
           </button>
         </div>
       </section>
+      <div>{renderProducts}</div>
     </>
   );
 };

@@ -1,28 +1,8 @@
 import { Search, ShoppingCart, Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
-import type { productType } from "../types/productstype";
-import axios from "axios";
+import { useState } from "react";
+
 const Navigation = () => {
   const [menuDrop, setMenuDrop] = useState<boolean>(false);
-
-  const [products, setProducts] = useState<productType[]>([]);
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get(`http://localhost:5500/products`);
-        const data = response.data;
-        setProducts(data);
-        console.log("fetched products:", data);
-      } catch (error) {
-        // show a more useful error in the console for debugging
-        console.error("Failed to fetch products:", error);
-        alert(
-          "Failed to fetch products. Make sure json-server is running on port 5500 (npm run json-server)"
-        );
-      }
-    };
-    fetchProducts();
-  }, []);
 
   const renderNav = (
     <nav className="flex flex-col gap-3 m-3 md:hidden">
@@ -33,17 +13,6 @@ const Navigation = () => {
     </nav>
   );
 
-  const renderProducts = products.map((product) => {
-    return (
-      <li key={product.id}>
-        {product.description}
-        {product.category}
-      </li>
-    );
-  });
-
-  // (optional) debug log for the products state
-  // console.log("products state:", products);
   const handleMenuClick = () => {
     setMenuDrop((prev) => !prev);
   };
@@ -96,7 +65,11 @@ const Navigation = () => {
           </button>
         </div>
       </section>
-      <div>{renderProducts}</div>
+      {/* <div className="flex max-h-dvh items-center ">
+        <div className="grid grid-cols-2  md:grid-cols-4 gap-2 ">
+          {renderProducts}
+        </div>
+      </div> */}
     </>
   );
 };

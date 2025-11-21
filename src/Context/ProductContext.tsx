@@ -1,14 +1,12 @@
 import axios from "axios";
-import { type ReactNode } from "react";
+import { type PropsWithChildren, type FC } from "react";
 import { useQuery } from "@tanstack/react-query";
 import type { productType } from "../types/productstype";
 import { ProductContext, type ProductContextType } from "./ProductContextType";
 
-type ProductProviderProps = {
-  children: ReactNode;
-};
+type ProductProviderProps = PropsWithChildren;
 
-export const ProductContextProvider = ({ children }: ProductProviderProps) => {
+const ProductContextProvider: FC<ProductProviderProps> = ({ children }) => {
   const fetchProducts = async (): Promise<productType[]> => {
     try {
       const response = await axios.get("http://localhost:5500/products");
@@ -37,4 +35,4 @@ export const ProductContextProvider = ({ children }: ProductProviderProps) => {
     <ProductContext.Provider value={value}>{children}</ProductContext.Provider>
   );
 };
-
+export default ProductContextProvider;

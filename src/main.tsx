@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import App from "./App.tsx";
-import { ProductContextProvider } from "./Context/ProductContext.tsx";
+import ProductContextProvider from "./Context/ProductContext.tsx";
 
 const queryClient = new QueryClient();
 createRoot(document.getElementById("root")!).render(

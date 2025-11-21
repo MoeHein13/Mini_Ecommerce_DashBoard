@@ -1,4 +1,4 @@
-import React from "react";
+import { ShoppingCart } from "lucide-react";
 import type { productType } from "../types/productstype";
 type productListType = {
   product: productType;
@@ -17,11 +17,12 @@ const ProductList = ({ product }: productListType) => {
         <div>
           <h2 className="font-semibold text-lg">{product.name}</h2>
           <p className="text-sm text-gray-600">{product.description}</p>
-          <p className="text-sm text-gray-500 mt-1">{product.category}</p>
         </div>
         <div className="mt-3 flex justify-between items-center">
           <p className="font-bold text-lg">${product.price}</p>
-          <p className="text-sm text-yellow-500">⭐ {product.rating}</p>
+          <button className="cursor-pointer">
+            <ShoppingCart color="#1639c5" />
+          </button>
         </div>
       </div>
     </div>

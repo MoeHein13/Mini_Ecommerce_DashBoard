@@ -1,8 +1,10 @@
 import { Search, ShoppingCart, Menu, X } from "lucide-react";
 import { useState } from "react";
+import SearchBar from "./SearchBar";
 
 const Navigation = () => {
   const [menuDrop, setMenuDrop] = useState<boolean>(false);
+  const [search, setSearch] = useState<boolean>(false);
 
   const renderNav = (
     <nav className="flex flex-col gap-3 m-3 md:hidden">
@@ -12,6 +14,10 @@ const Navigation = () => {
       <span>Contact</span>
     </nav>
   );
+
+  const handleSearch = () => {
+    setSearch((prev) => !prev);
+  };
 
   const handleMenuClick = () => {
     setMenuDrop((prev) => !prev);
@@ -35,6 +41,7 @@ const Navigation = () => {
                 color="#000000"
                 strokeWidth={1.75}
                 className="hidden md:inline"
+                onClick={handleSearch}
               />
               {menuDrop ? (
                 <X
@@ -52,6 +59,7 @@ const Navigation = () => {
           </div>
         </div>
         {menuDrop && renderNav}
+        {search && <SearchBar />}
       </header>
       <section className="w-full bg-purple-400  p-6">
         <div className="text-center flex-col justify-center items-center ">

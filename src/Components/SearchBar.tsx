@@ -1,7 +1,7 @@
 const SearchBar = () => {
   return (
     <>
-      <form>
+      <form className="flex items-center justify-center">
         <input
           type="text"
           placeholder="Search products.."

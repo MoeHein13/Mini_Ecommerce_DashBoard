@@ -2,7 +2,7 @@ import { createContext } from "react";
 import type { productType } from "../types/productstype";
 
 export type ProductContextType = {
-  products: productType[] | undefined;
+  products: productType[];
   isLoading: boolean;
   error: Error | null;
 };

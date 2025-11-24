@@ -3,6 +3,7 @@ import type { ProductContextType } from "../Context/ProductContextType";
 import ProductList from "./ProductList";
 import type { productType } from "../types/productstype";
 import { useState, type ChangeEvent } from "react";
+
 const Products = () => {
   const { products, isLoading, error }: ProductContextType = useProduct();
 

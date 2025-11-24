@@ -37,12 +37,15 @@ const Navigation = () => {
               <span>Contact</span>
             </nav>
             <div className="flex items-center gap-3">
-              <Search
-                color="#000000"
-                strokeWidth={1.75}
-                className="hidden md:inline"
-                onClick={handleSearch}
-              />
+              <div className="flex items-center gap-2">
+                {search && <SearchBar />}
+                <Search
+                  color="#000000"
+                  strokeWidth={1.75}
+                  className="hidden md:inline cursor-pointer"
+                  onClick={handleSearch}
+                />
+              </div>
               {menuDrop ? (
                 <X
                   className={`md:hidden hover:cursor-pointer`}
@@ -59,7 +62,6 @@ const Navigation = () => {
           </div>
         </div>
         {menuDrop && renderNav}
-        {search && <SearchBar />}
       </header>
       <section className="w-full bg-purple-400  p-6">
         <div className="text-center flex-col justify-center items-center ">

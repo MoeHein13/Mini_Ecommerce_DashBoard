@@ -1,24 +1,12 @@
 const SearchBar = () => {
   return (
-    <>
-      <form className="flex items-center justify-center">
-        <input
-          type="text"
-          placeholder="Search products.."
-          className="border-2 rounded-md "
-        />
-        <input
-          type="text"
-          placeholder="Products Categories"
-          className="border-2 rounded-md"
-        />
-        <select>
-          <option>this one</option>
-          <option>that one </option>
-          <option>those ones</option>
-        </select>
-      </form>
-    </>
+    <form className=" hidden md:inline  ">
+      <input
+        type="text"
+        placeholder="Search products.."
+        className="border-gray-500 border rounded-md  p-2 outline-0 "
+      />
+    </form>
   );
 };
 

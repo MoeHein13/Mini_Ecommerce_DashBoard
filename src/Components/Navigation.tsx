@@ -1,8 +1,12 @@
 import { Search, ShoppingCart, Menu, X } from "lucide-react";
-import { useState } from "react";
-import SearchBar from "./SearchBar";
+import { useState, type ChangeEvent } from "react";
 
-const Navigation = () => {
+type searchType = {
+  searchProducts: string;
+  handleSearch: (e: ChangeEvent<HTMLInputElement>) => void;
+};
+
+const Navigation = ({ searchProducts, handleSearch }: searchType) => {
   const [menuDrop, setMenuDrop] = useState<boolean>(false);
   const [search, setSearch] = useState<boolean>(false);
 
@@ -15,7 +19,19 @@ const Navigation = () => {
     </nav>
   );
 
-  const handleSearch = () => {
+  const renderSearchBar = (
+    <form className=" hidden md:inline  ">
+      <input
+        type="text"
+        placeholder="Search products.."
+        className="border-gray-500 border rounded-md  p-2 outline-0 "
+        value={searchProducts}
+        onChange={handleSearch}
+      />
+    </form>
+  );
+
+  const handleSearchIcon = () => {
     setSearch((prev) => !prev);
   };
 
@@ -38,12 +54,12 @@ const Navigation = () => {
             </nav>
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2">
-                {search && <SearchBar />}
+                {search && renderSearchBar}
                 <Search
                   color="#000000"
                   strokeWidth={1.75}
                   className="hidden md:inline cursor-pointer"
-                  onClick={handleSearch}
+                  onClick={handleSearchIcon}
                 />
               </div>
               {menuDrop ? (

@@ -1,14 +1,10 @@
-import Footer from "./Components/Footer";
-import Navigation from "./Components/Navigation";
-import Products from "./Components/Products";
+import HomePage from "./Components/HomePage";
 
 const App = () => {
   return (
     <>
-      <Navigation />
       {/* <SearchBar /> */}
-      <Products />
-      <Footer />
+      <HomePage />
     </>
   );
 };

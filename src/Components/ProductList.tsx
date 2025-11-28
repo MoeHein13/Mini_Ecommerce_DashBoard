@@ -1,10 +1,12 @@
 import { ShoppingCart } from "lucide-react";
 import type { productType } from "../types/productstype";
+import { useCart } from "../Hooks/useCart";
 type productListType = {
   product: productType;
 };
 
 const ProductList = ({ product }: productListType) => {
+  const { addToCart } = useCart();
   return (
     <div className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden group ">
       <div className="overflow-hidden relative aspect-square border-b-1 border-b-gray-200">
@@ -21,7 +23,7 @@ const ProductList = ({ product }: productListType) => {
         <div className="mt-3 flex justify-between items-center">
           <p className="font-bold text-lg">${product.price}</p>
           <button className="cursor-pointer">
-            <ShoppingCart color="#1639c5" />
+            <ShoppingCart color="#1639c5" onClick={() => addToCart(product)} />
           </button>
         </div>
       </div>

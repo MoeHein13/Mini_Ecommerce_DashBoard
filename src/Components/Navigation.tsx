@@ -1,5 +1,6 @@
 import { Search, ShoppingCart, Menu, X } from "lucide-react";
 import { useState, type ChangeEvent } from "react";
+import Cart from "./Cart";
 
 type searchType = {
   searchProducts: string;
@@ -10,10 +11,11 @@ const Navigation = ({ searchProducts, handleSearch }: searchType) => {
   const [menuDrop, setMenuDrop] = useState<boolean>(false);
   const [search, setSearch] = useState<boolean>(false);
 
+  const [cartLogo, setCartLogo] = useState<boolean>(false);
+
   const renderNav = (
     <nav className="flex flex-col gap-3 m-3 md:hidden">
       <span>Home</span>
-      <span>Shop</span>
       <span>About</span>
       <span>Contact</span>
     </nav>
@@ -38,6 +40,11 @@ const Navigation = ({ searchProducts, handleSearch }: searchType) => {
   const handleMenuClick = () => {
     setMenuDrop((prev) => !prev);
   };
+
+  const handleCartCilck = () => {
+    setCartLogo((prev) => !prev);
+  };
+
   return (
     <>
       <header className="bg-white border-b-gray-400 w-full  sticky top-0 z-50">
@@ -48,7 +55,6 @@ const Navigation = ({ searchProducts, handleSearch }: searchType) => {
             </div>
             <nav className=" hidden md:flex space-x-3 ">
               <span>Home</span>
-              <span>Shop</span>
               <span>About</span>
               <span>Contact</span>
             </nav>
@@ -73,11 +79,16 @@ const Navigation = ({ searchProducts, handleSearch }: searchType) => {
                   onClick={handleMenuClick}
                 />
               )}
-              <ShoppingCart color="#000000" />
+              <ShoppingCart
+                color="#000000"
+                className="cursor-pointer"
+                onClick={handleCartCilck}
+              />
             </div>
           </div>
         </div>
         {menuDrop && renderNav}
+        {cartLogo && <Cart />}
       </header>
       <section className="w-full bg-purple-400  p-6">
         <div className="text-center flex-col justify-center items-center ">

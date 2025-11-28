@@ -26,7 +26,7 @@ const ProductContextProvider: FC<ProductProviderProps> = ({ children }) => {
   });
 
   const value: ProductContextType = {
-    products: data,
+    products: data ?? [],
     isLoading,
     error: error as Error | null,
   };

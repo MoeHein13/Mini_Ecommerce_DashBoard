@@ -11,14 +11,6 @@ const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const [searchProducts, setSearchProducts] = useState<string>("");
-  // const categories = [
-  //   "All",
-  //   ...(Array.from(
-  //     new Set(
-  //       (products ?? []).map((product) => product.category).filter(Boolean)
-  //     )
-  //   ) as string[]),
-  // ];
 
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchProducts(e.target.value);
@@ -29,11 +21,11 @@ const Products = () => {
   };
   const categories = [
     "All",
-    ...new Set((products ?? []).map((product) => product.category)),
+    ...new Set(products.map((product) => product.category)),
   ];
 
   // First filter by search (across all categories)
-  const searchedProducts = products?.filter((product) =>
+  const searchedProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchProducts.toLowerCase())
   );
 
@@ -41,13 +33,10 @@ const Products = () => {
   const selectedProducts =
     selectedCategory === "All"
       ? searchedProducts
-      : searchedProducts?.filter((product) =>
-          product.category === selectedCategory
+      : searchedProducts.filter(
+          (product) => product.category === selectedCategory
         );
 
-  // const selectedSearchProducts = selectedProducts.find((product) =>
-  //   product.name.toLowerCase().includes(searchProducts.toLowerCase())
-  // );
   const renderedCategory = (
     <select
       className="max-w-xl text-center border-gray-400 border-2 rounded-md 

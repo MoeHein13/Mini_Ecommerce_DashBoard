@@ -1,6 +1,7 @@
 import { Search, ShoppingCart, Menu, X } from "lucide-react";
 import { useState, type ChangeEvent } from "react";
 import Cart from "./Cart";
+import { useCart } from "../Hooks/useCart";
 
 type searchType = {
   searchProducts: string;
@@ -12,6 +13,9 @@ const Navigation = ({ searchProducts, handleSearch }: searchType) => {
   const [search, setSearch] = useState<boolean>(false);
 
   const [cartLogo, setCartLogo] = useState<boolean>(false);
+
+  const { cart } = useCart();
+  const itemCount = cart.reduce((accu, item) => (accu += item.qty), 0);
 
   const renderNav = (
     <nav className="flex flex-col gap-3 m-3 md:hidden">
@@ -47,7 +51,7 @@ const Navigation = ({ searchProducts, handleSearch }: searchType) => {
 
   return (
     <>
-      <header className="bg-white border-b-gray-400 w-full  sticky top-0 z-50">
+      <header className="bg-white border-b-gray-400 w-full  sticky top-0 z-50 ">
         <div className=" max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto ">
           <div className="flex items-center justify-between gap-5 font-medium h-16">
             <div className="flex-shrink-0">
@@ -79,16 +83,25 @@ const Navigation = ({ searchProducts, handleSearch }: searchType) => {
                   onClick={handleMenuClick}
                 />
               )}
-              <ShoppingCart
-                color="#000000"
-                className="cursor-pointer"
-                onClick={handleCartCilck}
-              />
+              <div className="relative">
+                <button className="cursor-pointer " onClick={handleCartCilck}>
+                  <ShoppingCart color="#000000" />
+                  {itemCount > 0 && (
+                    <span className="rounded-full w-5 h-5 text-sm text-white bg-red-400 -top-3 -right-2 absolute flex justify-center items-center">
+                      {itemCount}
+                    </span>
+                  )}
+                </button>
+                {cartLogo && (
+                  <div className=" w-80 h-50 absolute right-0 z-50 mt-3 ">
+                    <Cart />
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
         {menuDrop && renderNav}
-        {cartLogo && <Cart />}
       </header>
       <section className="w-full bg-purple-400  p-6">
         <div className="text-center flex-col justify-center items-center ">
@@ -102,11 +115,6 @@ const Navigation = ({ searchProducts, handleSearch }: searchType) => {
           </button>
         </div>
       </section>
-      {/* <div className="flex max-h-dvh items-center ">
-        <div className="grid grid-cols-2  md:grid-cols-4 gap-2 ">
-          {renderProducts}
-        </div>
-      </div> */}
     </>
   );
 };

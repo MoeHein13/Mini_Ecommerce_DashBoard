@@ -12,7 +12,7 @@ const CartContextProvider = ({ children }: CartChildType) => {
       const existing = prev.find((item) => item.id === product.id);
 
       if (existing) {
-        prev.map((item) =>
+        return prev.map((item) =>
           item.id === product.id ? { ...product, qty: item.qty + 1 } : item
         );
       }

@@ -103,7 +103,7 @@ const Navigation = ({ searchProducts, handleSearch }: searchType) => {
         </div>
         {menuDrop && renderNav}
       </header>
-      <section className="w-full bg-purple-400  p-6">
+      {/* <section className="w-full bg-purple-400  p-6">
         <div className="text-center flex-col justify-center items-center ">
           <h2 className="text-2xl font-semibold">Discover Amazing Products</h2>
           <div className="font-medium text-gray-200">
@@ -114,7 +114,7 @@ const Navigation = ({ searchProducts, handleSearch }: searchType) => {
             Shop now
           </button>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

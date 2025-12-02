@@ -2,7 +2,7 @@ import useProduct from "../Hooks/useProducts";
 import type { ProductContextType } from "../Context/ProductContextType";
 import ProductList from "./ProductList";
 import type { productType } from "../types/productstype";
-import { useState, type ChangeEvent } from "react";
+import { useState, type ChangeEvent, type MouseEvent } from "react";
 import Navigation from "./Navigation";
 
 const Products = () => {
@@ -16,8 +16,9 @@ const Products = () => {
     setSearchProducts(e.target.value);
   };
 
-  const handleChangeFilter = (e: ChangeEvent<HTMLSelectElement>) => {
-    setSelectedCategory(e.target.value);
+  //Note
+  const handleChangeFilter = (e: MouseEvent) => {
+    setSelectedCategory((e.target as HTMLButtonElement).value);
   };
   const categories = [
     "All",
@@ -38,18 +39,30 @@ const Products = () => {
         );
 
   const renderedCategory = (
-    <select
-      className="max-w-xl text-center border-gray-400 border-2 rounded-md 
-    "
-      value={selectedCategory}
-      onChange={handleChangeFilter}
-    >
+    <div className="flex justify-between items-center gap-5">
       {categories.map((cat) => (
-        <option value={cat} key={cat}>
+        <button
+          key={cat}
+          value={cat}
+          onClick={handleChangeFilter}
+          className="bg-black text-gray-200 p-3 border-0 rounded-md cursor-pointer hover:translate-y-1 translate-2 hover:font-semibold hover:shadow-xl "
+        >
           {cat}
-        </option>
+        </button>
       ))}
-    </select>
+    </div>
+    // <select
+    //   className="max-w-xl text-center border-gray-400 border-2 rounded-md
+    // "
+    //   value={selectedCategory}
+    //   onChange={handleChangeFilter}
+    // >
+    //   {categories.map((cat) => (
+    //     <option value={cat} key={cat}>
+    //       {cat}
+    //     </option>
+    //   ))}
+    // </select>
   );
 
   const renderProducts = (

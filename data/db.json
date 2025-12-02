@@ -77,7 +77,7 @@
       "price": 55,
       "rating": 4.2,
       "stock": 90,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTJ9ytjfOAMM21mOI6eoGMmIk0ct17ODUvQA&s",
+      "image": "https://m.media-amazon.com/images/I/51KDaluitKL._AC_SX679_.jpg",
       "description": "Durable laptop backpack with 15-inch compartment."
     },
     {
@@ -127,7 +127,7 @@
       "price": 19.99,
       "rating": 4.1,
       "stock": 140,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2_HE5L6xFr35F56PJmvpHV_gapKOJWGfT_g&s",
+      "image": "https://m.media-amazon.com/images/I/51ME-CFe04L._AC_SX679_.jpg",
       "description": "Soft cotton unisex T-shirt."
     },
     {
@@ -137,7 +137,7 @@
       "price": 49.99,
       "rating": 4.2,
       "stock": 100,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgJnEPa0gYuSFH80BkdGkv1YWlWaFunAUYdQ&s",
+      "image": "https://m.media-amazon.com/images/I/518RtO6sZSL._AC_SX575_.jpg",
       "description": "Polarized UV400 protection sunglasses."
     },
     {
@@ -149,6 +149,106 @@
       "stock": 25,
       "image": "https://cdn.shopify.com/s/files/1/0615/0081/7593/files/IW-320-24-01_1000x1500.jpg?v=1728100605",
       "description": "Ergonomic gaming chair with recline function."
+    },
+    {
+      "id": 116,
+      "name": "Portable Power Bank",
+      "category": "Electronics",
+      "price": 39.99,
+      "rating": 4.5,
+      "stock": 110,
+      "image": "https://m.media-amazon.com/images/I/61Hc3W9r7WL._AC_SL1500_.jpg",
+      "description": "10000mAh fast-charging portable power bank with USB-C support."
+    },
+    {
+      "id": 117,
+      "name": "Yoga Mat",
+      "category": "Fitness",
+      "price": 29.5,
+      "rating": 4.4,
+      "stock": 95,
+      "image": "https://m.media-amazon.com/images/I/81RjvqyGsvL._AC_SL1500_.jpg",
+      "description": "Non-slip 8mm thick yoga mat suitable for all workouts."
+    },
+    {
+      "id": 118,
+      "name": "Stainless Steel Knife Set",
+      "category": "Kitchenware",
+      "price": 89.99,
+      "rating": 4.6,
+      "stock": 45,
+      "image": "https://m.media-amazon.com/images/I/71tPjqCAdKL._AC_SL1500_.jpg",
+      "description": "6-piece premium stainless steel knife set with block."
+    },
+    {
+      "id": 119,
+      "name": "Foldable Laptop Stand",
+      "category": "Accessories",
+      "price": 22.99,
+      "rating": 4.3,
+      "stock": 130,
+      "image": "https://m.media-amazon.com/images/I/61z6zt34c0L._AC_SY300_SX300_QL70_ML2_.jpg",
+      "description": "Adjustable aluminum foldable laptop stand for 11–17 inch laptops."
+    },
+    {
+      "id": 120,
+      "name": "Electric Kettle",
+      "category": "Kitchenware",
+      "price": 34.99,
+      "rating": 4.1,
+      "stock": 85,
+      "image": "https://m.media-amazon.com/images/I/71YQJPywklL._AC_SX300_SY300_QL70_ML2_.jpg",
+      "description": "1.7L stainless steel electric kettle with auto shut-off."
+    },
+    {
+      "id": 121,
+      "name": "Sports Water Jug",
+      "category": "Fitness",
+      "price": 16.99,
+      "rating": 4.3,
+      "stock": 160,
+      "image": "https://m.media-amazon.com/images/I/41ZPiDU6woL._AC_SY300_SX300_QL70_ML2_.jpg",
+      "description": "2.2L BPA-free large sports water jug with carrying handle."
+    },
+    {
+      "id": 122,
+      "name": "Slim Wallet",
+      "category": "Accessories",
+      "price": 14.5,
+      "rating": 4.2,
+      "stock": 150,
+      "image": "https://m.media-amazon.com/images/I/51HwCM5E2nL._AC_SY300_SX300_QL70_ML2_.jpg",
+      "description": "Minimalist RFID-blocking slim wallet for men and women."
+    },
+    {
+      "id": 123,
+      "name": "Wireless Charger Pad",
+      "category": "Electronics",
+      "price": 27.99,
+      "rating": 4.4,
+      "stock": 100,
+      "image": "https://m.media-amazon.com/images/I/61jSpfo7QvL._AC_SY300_SX300_QL70_ML2_.jpg",
+      "description": "Fast-charging wireless charger compatible with iPhone and Android."
+    },
+    {
+      "id": 124,
+      "name": "Portable Mini Fan",
+      "category": "Home Appliances",
+      "price": 12.99,
+      "rating": 4.0,
+      "stock": 200,
+      "image": "https://m.media-amazon.com/images/I/41FZCLSt7rL._AC_SY300_SX300_QL70_ML2_.jpg",
+      "description": "Rechargeable handheld mini fan with 3 wind modes."
+    },
+    {
+      "id": 125,
+      "name": "Travel Toiletry Bag",
+      "category": "Bags",
+      "price": 24.99,
+      "rating": 4.5,
+      "stock": 90,
+      "image": "https://m.media-amazon.com/images/I/814hvKWlOKL._AC_SY300_SX300_QL70_ML2_.jpg",
+      "description": "Waterproof hanging toiletries organizer for travel."
     }
   ]
 }

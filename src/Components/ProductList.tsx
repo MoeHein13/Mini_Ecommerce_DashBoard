@@ -9,7 +9,7 @@ const ProductList = ({ product }: productListType) => {
   const { addToCart } = useCart();
   return (
     <div className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden group ">
-      <div className="overflow-hidden relative aspect-square border-b-1 border-b-gray-200">
+      <div className=" aspect-square border-b-1 border-b-gray-200">
         <img
           src={product.image}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"

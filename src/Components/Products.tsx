@@ -88,7 +88,7 @@ const Products = () => {
   return (
     <>
       <Navigation searchProducts={searchProducts} handleSearch={handleSearch} />
-      <section className="py-16 bg-gray-200 w-full">
+      <section className="py-6 bg-gray-200 w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-6 p-5 items-center">
             <div>{renderedCategory}</div>

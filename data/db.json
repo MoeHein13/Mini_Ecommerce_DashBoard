@@ -157,7 +157,7 @@
       "price": 39.99,
       "rating": 4.5,
       "stock": 110,
-      "image": "https://m.media-amazon.com/images/I/61Hc3W9r7WL._AC_SL1500_.jpg",
+      "image": "https://m.media-amazon.com/images/I/61kUIqHqCxL._AC_SY300_SX300_QL70_ML2_.jpg",
       "description": "10000mAh fast-charging portable power bank with USB-C support."
     },
     {
@@ -167,7 +167,7 @@
       "price": 29.5,
       "rating": 4.4,
       "stock": 95,
-      "image": "https://m.media-amazon.com/images/I/81RjvqyGsvL._AC_SL1500_.jpg",
+      "image": "https://m.media-amazon.com/images/I/41g4DUsFDrL._AC_SX522_.jpg",
       "description": "Non-slip 8mm thick yoga mat suitable for all workouts."
     },
     {
@@ -177,7 +177,7 @@
       "price": 89.99,
       "rating": 4.6,
       "stock": 45,
-      "image": "https://m.media-amazon.com/images/I/71tPjqCAdKL._AC_SL1500_.jpg",
+      "image": "https://m.media-amazon.com/images/I/61mU9pRsabL._AC_SX679_.jpg",
       "description": "6-piece premium stainless steel knife set with block."
     },
     {
@@ -230,16 +230,7 @@
       "image": "https://m.media-amazon.com/images/I/61jSpfo7QvL._AC_SY300_SX300_QL70_ML2_.jpg",
       "description": "Fast-charging wireless charger compatible with iPhone and Android."
     },
-    {
-      "id": 124,
-      "name": "Portable Mini Fan",
-      "category": "Home Appliances",
-      "price": 12.99,
-      "rating": 4.0,
-      "stock": 200,
-      "image": "https://m.media-amazon.com/images/I/41FZCLSt7rL._AC_SY300_SX300_QL70_ML2_.jpg",
-      "description": "Rechargeable handheld mini fan with 3 wind modes."
-    },
+
     {
       "id": 125,
       "name": "Travel Toiletry Bag",

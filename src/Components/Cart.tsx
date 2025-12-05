@@ -1,7 +1,7 @@
 import { useCart } from "../Hooks/useCart";
 import { Plus, Minus } from "lucide-react";
 const Cart = () => {
-  const { cart, clearCart, removeCart, addToCart } = useCart();
+  const { cart, clearCart, removeCart, addToCart, reduceItem } = useCart();
 
   const itemCount = cart.reduce((accu, item) => (accu += item.qty), 0);
 
@@ -23,19 +23,27 @@ const Cart = () => {
             </p>
           </div>
 
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex flex-col justify-center">
+            <div className="flex items-center justify-center gap-3">
+              <button
+                className="hover:underline text-sm  text-white cursor-pointer font-semibold border-0 bg-gray-400"
+                onClick={() => reduceItem(item.id)}
+              >
+                <Minus size={18} />
+              </button>
+              <div className="">{item.qty}</div>
+              <button
+                className="hover:underline text-sm text-white cursor-pointer font-semibold border-0 bg-gray-400"
+                onClick={() => addToCart(item)}
+              >
+                <Plus size={18} />
+              </button>
+            </div>
             <button
-              className="hover:underline text-sm text-white cursor-pointer font-semibold border-0 bg-gray-400"
-              onClick={() => addToCart(item)}
-            >
-              <Plus size={20} />
-            </button>
-            <div className="">{item.qty}</div>
-            <button
-              className="hover:underline text-sm  text-white cursor-pointer font-semibold border-0 bg-gray-400"
+              className="text-sm text-red-400 cursor-pointer "
               onClick={() => removeCart(item.id)}
             >
-              <Minus size={20} />
+              Remove
             </button>
           </div>
         </li>

@@ -1,4 +1,3 @@
-import { ShoppingCart } from "lucide-react";
 import type { productType } from "../types/productstype";
 import { useCart } from "../Hooks/useCart";
 type productListType = {
@@ -17,13 +16,17 @@ const ProductList = ({ product }: productListType) => {
       </div>
       <div className="p-4 flex flex-col justify-between">
         <div>
-          <h2 className="font-semibold text-lg">{product.name}</h2>
+          <h2 className="font-bold text-xl">{product.name}</h2>
           <p className="text-sm text-gray-600">{product.description}</p>
         </div>
         <div className="mt-3 flex justify-between items-center">
           <p className="font-bold text-lg">${product.price}</p>
-          <button className="cursor-pointer">
-            <ShoppingCart color="#1639c5" onClick={() => addToCart(product)} />
+          <button
+            className="cursor-pointer border-0 bg-blue-500 text-white font-semibold rounded-md p-2 hover:-translate-y-1 hover:transition-transform hover:duration-150"
+            onClick={() => addToCart(product)}
+          >
+            {/* <ShoppingCart color="#1639c5" onClick={() => addToCart(product)} /> */}
+            Add to Cart
           </button>
         </div>
       </div>

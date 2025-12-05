@@ -24,12 +24,22 @@ const CartContextProvider = ({ children }: CartChildType) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
   };
 
+  const reduceItem = (id: number) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item.id === id ? { ...item, qty: item.qty - 1 } : item
+      )
+    );
+  };
+
   const clearCart = () => {
     setCart([]);
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeCart, clearCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeCart, clearCart, reduceItem }}
+    >
       {children}
     </CartContext.Provider>
   );
